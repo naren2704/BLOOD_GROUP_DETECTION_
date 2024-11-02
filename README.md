@@ -40,20 +40,20 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/blood-group-detection.git
    cd blood-group-detection
-Install required dependencies: Make sure you have Python installed. Then run:
+2.Install required dependencies: Make sure you have Python installed. Then run:
 pip install -r requirements.txt
 
-Run the Flask app:
+3.Run the Flask app:
 python app.py
-Access the Web Interface: Open your browser and go to http://127.0.0.1:5000 to use the application.
+4.Access the Web Interface: Open your browser and go to http://127.0.0.1:5000 to use the application.
 
-Future Enhancements
-Improve model accuracy with a larger dataset
-Add support for different types of biometric input
-Integrate user authentication and authorization
-Deploy the application for public use
-Contributors
-Alagu Nachiyar K
-Vaishali
-Narendran
+## Future Enhancements
+-Improve model accuracy with a larger dataset
+-Add support for different types of biometric input
+-Integrate user authentication and authorization
+-Deploy the application for public use
+## Contributors
+#### -Alagu Nachiyar K
+#### -Vaishali
+#### -Narendran
 
