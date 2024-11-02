@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Fingerprint Image</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5dc;  /* Beige background */
+            text-align: center;
+            padding: 50px;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+            color: #8B4513;  /* Brown color */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 24px;
+            color: #A0522D;  /* Darker brown color */
+            margin-bottom: 40px;
+        }
+        .instruction-message {
+            font-size: 20px;
+            color: #654321; /* Dark brown color */
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .upload-btn {
+            background-color: #8B4513; /* Brown */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px; /* Unique button shape */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+        .upload-btn:hover {
+            background-color: #5C3A25; /* Darker brown on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
+        .error-message {
+            color: red;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #654321; /* Dark brown */
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Your Fingerprint Image</h1>
+    <h2>Let's Get Started!</h2>
+    <p class="instruction-message">Please select a fingerprint image from your device. Our advanced system will analyze it and determine your blood group.</p>
+    {% if error %}
+        <div class="error-message">{{ error }}</div>
+    {% endif %}
+    <form action="/upload_image" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <br><br>
+        <button type="submit" class="upload-btn">Upload and Analyze</button>
+    </form>
+    <br>
+    <a href="/" class="btn btn-secondary">Back to Home</a>
+    <div class="footer">
+        <p>CREATORS: ALAGU NACHIYAR K, VAISHALI, NARENDRAN</p>
+    </div>
+</body>
+</html>
+

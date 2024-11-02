@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5dc;  /* Beige background */
+            text-align: center;
+            padding: 50px;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+            color: #8B4513;  /* Brown color */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 24px;
+            color: #A0522D;  /* Darker brown color */
+            margin-bottom: 20px;
+        }
+        .thank-you-message {
+            font-size: 20px;
+            color: #654321; /* Dark brown color */
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #654321; /* Dark brown */
+        }
+        .image-preview {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+        .upload-btn {
+            background-color: #8B4513; /* Brown */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .upload-btn:hover {
+            background-color: #5C3A25; /* Darker brown on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <h2>Your blood group is: <strong>{{ blood_group }}</strong></h2>
+    <p class="thank-you-message">Thank you for using our service!</p>
+    <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Uploaded Fingerprint" class="image-preview">
+    <br><br>
+    <a href="/" class="btn upload-btn">Upload Another Image</a>
+    <div class="footer">
+        <p>CREATORS: ALAGU NACHIYAR K, VAISHALI, NARENDRAN</p>
+    </div>
+</body>
+</html>
